@@ -1,0 +1,43 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# =========================
+# Virtual Environment
+# =========================
+venv/
+env/
+ENV/
+
+# =========================
+# Dataset (Training Data)
+# =========================
+dataset/
+
+# =========================
+# Environment Variables
+# =========================
+.env
+
+# =========================
+# Uploaded / Runtime files
+# =========================
+static/uploads/
+static/captures/
+
+# =========================
+# Model weights (if large)
+# =========================
+model/*.h5
+
+# =========================
+# VS Code / System Files
+# =========================
+.vscode/
+.DS_Store
+Thumbs.db

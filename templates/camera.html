@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Camera Detection</title>
+</head>
+<body style="text-align:center; font-family:Arial">
+
+<h2>📷 Crop Disease Detection (Camera)</h2>
+
+<video id="video" width="320" height="240" autoplay playsinline></video>
+<br><br>
+
+<canvas id="canvas" width="320" height="240" style="display:none;"></canvas>
+
+<form method="post" action="/predict_camera" onsubmit="return sendImage();">
+    <input type="hidden" name="image" id="image">
+    <button type="button" onclick="capture()">📸 Capture Image</button>
+    <br><br>
+    <button type="submit">🔍 Predict Disease</button>
+</form>
+
+<script>
+const video = document.getElementById("video");
+const canvas = document.getElementById("canvas");
+const imageInput = document.getElementById("image");
+const ctx = canvas.getContext("2d");
+
+// Start camera
+navigator.mediaDevices.getUserMedia({ video: true })
+    .then(stream => {
+        video.srcObject = stream;
+    })
+    .catch(err => {
+        alert("Camera access denied!");
+        console.error(err);
+    });
+
+// Capture image
+function capture() {
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    alert("Image captured successfully!");
+}
+
+// Send image to backend
+function sendImage() {
+    const dataURL = canvas.toDataURL("image/png");
+    imageInput.value = dataURL;
+
+    if (!dataURL || dataURL.length < 100) {
+        alert("Please capture image first!");
+        return false;
+    }
+    return true;
+}
+</script>
+
+</body>
+</html>

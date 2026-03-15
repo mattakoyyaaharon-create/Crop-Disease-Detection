@@ -2,14 +2,7 @@ Batch ID: Batch-07
 Course: Undergrad Major Project 2026
 Institution: PACE Institute of Technology & Sciences
 ________________________________________
-👥 Team Members
-Name	Roll Number	GitHub Handle
-KATTEDA SASI KUMAR	22KQ1A6144	
-MADDISETTY DIVYA SAI CHARAN	22KQ1A6149
-ANNAVARAPU VANAJA	22KQ1A6102	
-KODUMURI VIJAYA VASANTHI LAKSHMI	22KQ1A6111	
-THUMMALA UMA VAISHNAVI	22KQ1A6127	
-________________________________________
+
 🚀 Project Overview
 📌 Problem Statement
 Crop diseases significantly affect agricultural productivity and food security. Traditional manual disease detection methods are time-consuming, error-prone, and not scalable for large farms. There is a need for an automated, accurate, and real-time disease detection system suitable for deployment in rural agricultural environments.

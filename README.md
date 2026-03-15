@@ -1,6 +1,4 @@
-Batch ID: Batch-07
-Course: Undergrad Major Project 2026
-Institution: PACE Institute of Technology & Sciences
+
 ________________________________________
 
 🚀 Project Overview
